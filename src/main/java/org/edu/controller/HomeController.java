@@ -41,8 +41,9 @@ public class HomeController {
 		model.addAttribute("serverTime", formattedDate );
 		String maker = "김용현";
 		model.addAttribute("jspmaker",maker);
-		//List<MemberVO> list = dao.selectMember();
-		//model.addAttribute("memberList", list);
+		
+		List<MemberVO> list = dao.selectMember();
+		model.addAttribute("memberList", list);
 		
 		return "home";
 	}
